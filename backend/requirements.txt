@@ -1,0 +1,14 @@
+# Placeholder for backend requirements
+fastapi
+uvicorn[standard]
+python-multipart
+torch
+transformers
+Pillow
+requests
+sentencepiece
+accelerate
+loguru>=0.6.0            
+python-dotenv     
+einops      
+timm 

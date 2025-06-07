@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florence-2 DocVQA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Florence-2 Document VQA</h1>
+            <p>Upload an image of a document and ask a question about it.</p>
+        </header>
+
+        <main>
+            <form id="ocr-form">
+                <div class="form-group">
+                    <label for="image-upload">1. Upload an Image</label>
+                    <input type="file" id="image-upload" accept="image/*" required>
+                    <img id="image-preview" src="#" alt="Image Preview" class="hidden" />
+                </div>
+                <div class="form-group">
+                    <label for="question-input">2. Ask a Question</label>
+                    <input type="text" id="question-input" placeholder="e.g., What is the invoice number?" required>
+                </div>
+                <button type="submit" id="submit-btn">Get Answer</button>
+            </form>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing document, please wait...</p>
+            </div>
+            
+            <div id="result-container" class="hidden">
+                <h2>Answer:</h2>
+                <p id="result-text"></p>
+            </div>
+        </main>
+    </div>
+
+    <!-- YOUR CURRENT (INCORRECT) LINE PROBABLY LOOKS LIKE THIS: -->
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+header h1 {
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input[type="file"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#result-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 8px;
+    text-align: left;
+}
+
+#result-container h2 {
+    margin-top: 0;
+    color: #4338ca;
+}
+
+#result-text {
+    font-size: 1.1rem;
+    white-space: pre-wrap; /* Preserve line breaks */
+    word-wrap: break-word;
+}
+
+/* Spinner and Hidden Class */
+.hidden {
+    display: none;
+}
+
+#loading {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #666;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #4f46e5;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
